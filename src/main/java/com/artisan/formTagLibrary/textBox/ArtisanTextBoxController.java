@@ -24,7 +24,7 @@ public class ArtisanTextBoxController {
 
 	@RequestMapping(value = "/artisanTextBox", method = RequestMethod.GET)
 	public ModelAndView artisan() {
-		return new ModelAndView("formTagLibrary/artisan", "command",
+		return new ModelAndView("formTagLibrary/textBox/artisan", "command",
 				new Artisan());
 	}
 
@@ -34,7 +34,7 @@ public class ArtisanTextBoxController {
 		map.addAttribute("name", artisan.getName());
 		map.addAttribute("age", artisan.getAge());
 		map.addAttribute("id", artisan.getId());
-		return "formTagLibrary/result";
+		return "formTagLibrary/textBox/result";
 	}
 
 }
